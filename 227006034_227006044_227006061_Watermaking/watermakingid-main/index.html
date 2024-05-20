@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Aplikasi Watermaking</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #0b315a;
+            color: #333;
+        }
+
+        main {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            flex: 1 1 400px;
+            max-width: 600px;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin: 20px;
+            border-radius: 8px;
+        }
+
+        .image-container {
+            flex: 1 1 400px;
+            max-width: 600px;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin: 20px;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 1.5em;
+            margin-bottom: 20px;
+            color: #007BFF;
+        }
+
+        .wrap {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input[type="file"] {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-bottom: 10px;
+        }
+
+        button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 10px 5px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #007BFF;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+
+        canvas {
+            width: 100%;
+            height: auto;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+<main>
+    <div class="container">
+        <h2>Aplikasi Watermaking Berbasis Website Dengan Teknik Cover Generation Pada Media Gambar Menggunakan Metode Discrete Cosine Transform (DCT)</h2>
+        
+        <div class="wrap">
+            <label for="imageInput">Unggah Foto Original</label>
+            <input type="file" id="imageInput" accept="image/*">
+        </div>
+        
+        <div class="wrap">
+            <label for="watermarkImageInput">Unggah Foto Untuk Watermark</label>
+            <input type="file" id="watermarkImageInput" accept="image/*">
+        </div>
+        
+        <button id="addWatermark">Terapkan Watermark</button>
+        <button id="extractWatermark">Ekstrak Watermark</button>
+    </div>
+
+    <div class="image-container">
+        <figure>
+            <canvas id="watermarkedCanvas"></canvas>
+            <button id="downloadButton" disabled>Unduh Hasil Watermark</button>
+        </figure>
+    </div>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
